@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+	<title> Javascript counter </title>
+	<meta charset="UTF-8">
+	<style>
+		body, html {
+			background-color: #c19a6c;
+		}
+		.container {
+			
+			text-align: center;
+		}
+		.inner-container {
+			width: 400px;
+			border: 2px solid white;
+			
+			margin: auto;
+			padding-top: 50px;
+			margin-top: 100px;
+			padding-bottom: 50px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			
+		}
+		#counter {
+			font-size: 150px;
+			color: green;
+		}
+		.title {
+			
+			color: white;
+		}
+		button {
+			color: white;
+			font-size: 20px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			padding-left: 15px;
+			padding-right: 15px;
+			background-color: #154360;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+		button#addCount {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="inner-container">
+			<h1 class="title"> COUNTER</h1>
+			<div id="counter"> 0
+			</div>
+			<button id="lowerCount" onclick="lowerCount()">LOWER COUNT </button> </br>
+			<button id="addCount" onclick="addCount()"> ADD COUNT </button>
+		</div>
+	</div>
+	
+	<script>
+		var count = 0;
+		var maxCount = 50;
+		var minCount = 0;
+		function addCount() {
+			if (count < maxCount) {
+				count = count + 1;
+				document.getElementById("counter").innerHTML = count;
+			}
+		}
+		function lowerCount() {
+			if (count > minCount) {
+				count = count - 1;
+				document.getElementById("counter").innerHTML = count;
+			}
+		}
+	</script>
+</body>
+</html>
